@@ -78,7 +78,6 @@ class OrderController extends Controller
             'pickup_time'=>$request->pickup_time,
             'delivery_time'=>$request->delivery_time,
             'status'=>$request->status,
-            'user_id'=>Auth::user()->id,
         ]);
         return redirect()->route('orders.index')->with('success', 'Order updated successfully.');
     }
